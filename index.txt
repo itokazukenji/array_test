@@ -1,0 +1,35 @@
+/*
+$array1 = [
+    01000,
+    12000,
+    21000,
+];
+
+*/
+$array1 = [
+    '01',
+    '12',
+    '21',
+];
+
+$array2 = [
+    '01111',
+    '01222',
+    '01333',
+    '14111',
+    '14222',
+    '14333',
+    '21111',
+    '21222',
+    '21333',
+];
+
+
+$new_array = [];
+foreach ($array2 as $value) {
+    if (in_array(substr($value, 0, 2), $array1) === false) {
+        $new_array[] = $value;
+    }
+} 
+
+var_dump($new_array);
